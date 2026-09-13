@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="CodeNexon">
+  <meta name="theme-color" content="#ec0000">
+  <meta name="description"
+    content="AWS vs Azure vs Google Cloud comparison 2024. Services, pricing, and use cases compared.">
+  <meta name="keywords" content="AWS vs Azure vs GCP 2024, Best Cloud Provider, Cloud Comparison">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS vs Azure vs Google Cloud: Which is Best in 2024? | CodeNexon</title>
+  <link rel="canonical" href="https://codenexon.com/blogs/cloud/aws-vs-azure-vs-gcp.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CodeNexon">
+  <meta property="og:title" content="AWS vs Azure vs Google Cloud: Which is Best in 2024? | CodeNexon">
+  <meta property="og:description"
+    content="AWS vs Azure vs Google Cloud comparison 2024. Services, pricing, and use cases compared.">
+  <meta property="og:url" content="https://codenexon.com/blogs/cloud/aws-vs-azure-vs-gcp.html">
+  <meta property="og:image" content="https://codenexon.com/images/codenexon-logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AWS vs Azure vs Google Cloud: Which is Best in 2024? | CodeNexon">
+  <meta name="twitter:description"
+    content="AWS vs Azure vs Google Cloud comparison 2024. Services, pricing, and use cases compared.">
+  <meta name="twitter:image" content="https://codenexon.com/images/codenexon-logo.webp">
+  <link rel="icon" href="../../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/responsive.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/animate.css">
+  <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://codenexon.com/#organization",
+      "name": "CodeNexon",
+      "url": "https://codenexon.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://codenexon.com/images/codenexon-logo.webp"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://codenexon.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technology",
+          "item": "https://codenexon.com/technology.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AWS vs Azure vs Google Cloud: Which is Best in 2024?",
+          "item": "https://codenexon.com/blogs/cloud/aws-vs-azure-vs-gcp.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://codenexon.com/blogs/cloud/aws-vs-azure-vs-gcp.html"
+      },
+      "headline": "AWS vs Azure vs Google Cloud: Which is Best in 2024?",
+      "description": "AWS vs Azure vs Google Cloud comparison 2024. Services, pricing, and use cases compared.",
+      "image": "https://codenexon.com/images/codenexon-logo.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Shubham Handore"
+      },
+      "publisher": {
+        "@id": "https://codenexon.com/#organization"
+      },
+      "datePublished": "2026-09-02",
+      "dateModified": "2026-09-02"
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="ctn-preloader" class="ctn-preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading"><span data-text-preloader="C" class="letters-loading">C</span><span
+            data-text-preloader="O" class="letters-loading">O</span><span data-text-preloader="D"
+            class="letters-loading">D</span><span data-text-preloader="E" class="letters-loading">E</span><span
+            data-text-preloader="N" class="letters-loading">N</span><span data-text-preloader="E"
+            class="letters-loading">E</span><span data-text-preloader="X" class="letters-loading">X</span><span
+            data-text-preloader="O" class="letters-loading">O</span><span data-text-preloader="N"
+            class="letters-loading">N</span></div>
+      </div>
+      <div class="loader">
+        <div class="row">
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-left">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+          <div class="col-3 loader-section section-right">
+            <div class="bg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="body-inner">
+    <div id="top-bar" class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <ul class="unstyled top-nav">
+              <li><a href="../../index.html">Home</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 top-social text-lg-right text-md-center">
+            <ul class="unstyled">
+              <li><a title="Facebook" href="#"><span class="social-icon"><i class="fa fa-facebook"></i></span></a><a
+                  title="Twitter" href="#"><span class="social-icon"><i class="fa fa-twitter"></i></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <div class="logo"><a href="../../index.html"><img src="../../images/codenexon-logo.webp" alt="CodeNexon" width="150" height="50"></a></div>
+          </div>
+          <div class="col-md-9 col-sm-12 header-right">
+            <div class="ad-banner float-right"> <a href="#"><img src="../../images/banner-ads/ad-top-header.png"
+                  class="img-fluid" alt=""></a> </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Main Nav Start -->
+    <div class="utf_main_nav_area clearfix utf_sticky">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg col">
+            <div class="utf_site_nav_inner float-left">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div id="navbarMain" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+
+                  <li class="nav-item active"><a href="../../index.html" class="nav-link">Home</a></li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../technology.html" class="nav-link dropdown-toggle"
+                      data-toggle="dropdown">Technology</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/ai/what-is-generative-ai.html">Artificial
+                          Intelligence</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/cybersecurity/how-to-stay-safe-online.html">Cybersecurity</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/cloud/what-is-cloud-computing.html">Cloud
+                          Computing</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/technology/quantum-computing-explained.html">Emerging Technology</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../gadgets.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Gadgets</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/gadgets/best-smartphones-2024.html">Smartphones</a>
+                      </li>
+                      <li><a class="dropdown-item" href="../../blogs/laptops/best-laptops-for-coding.html">Laptops &amp;
+                          Computers</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/gadgets/top-earphones-under-2000.html">Audio &amp;
+                          Earphones</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/gadgets/best-smartwatches-2025.html">Smartwatches
+                          &amp; Wearables</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/gadgets/essential-tech-accessories.html">Accessories</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../how-to.html" class="nav-link dropdown-toggle" data-toggle="dropdown">How To</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/how-to/how-to-speed-up-windows-11.html">Windows</a>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/how-to/how-to-remove-malware.html">Troubleshooting</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/coding/learn-html-css-beginners.html">Coding</a>
+                      </li>
+                      <li><a class="dropdown-item" href="../../blogs/how-to/how-to-speed-up-android.html">Android</a>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/how-to/how-to-start-a-wordpress-website.html">WordPress</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../news.html" class="nav-link dropdown-toggle" data-toggle="dropdown">News</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/news/latest-ai-developments-2024.html">AI News
+                          &amp; Updates</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/news/apple-event-highlights.html">Product
+                          Launches</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/news/windows-11-update-2025.html">Software
+                          Updates</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/news/data-breach-response-guide.html">Cybersecurity
+                          Alerts</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../software-apps.html" class="nav-link dropdown-toggle"
+                      data-toggle="dropdown">Software</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/software/best-ai-tools-for-students.html">AI
+                          Tools</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/software/top-free-photo-editing-apps.html">Design
+                          Tools</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/software/best-productivity-apps-2025.html">Productivity</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/software/best-developer-tools-2025.html">Developer
+                          Tools</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/software/choosing-saas-tools-small-business.html">SaaS Products</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a href="../../categories.html#reviews" class="nav-link dropdown-toggle"
+                      data-toggle="dropdown">Reviews</a>
+                    <ul class="utf_dropdown_menu">
+                      <li><a class="dropdown-item" href="../../blogs/reviews/samsung-galaxy-s24-review.html">Smartphone
+                          Reviews</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/reviews/macbook-pro-m3-review.html">Laptop
+                          Reviews</a></li>
+                      <li><a class="dropdown-item" href="../../blogs/reviews/notion-vs-obsidian-analysis.html">Software
+                          Reviews</a></li>
+                      <li><a class="dropdown-item"
+                          href="../../blogs/reviews/chatgpt-plus-vs-claude-pro-analysis.html">AI Tool Reviews</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="utf_nav_search"><span id="search"><i class="fa fa-search"></i></span></div>
+          <div class="utf_search_block" style="display: none;">
+            <input type="text" class="form-control" placeholder="Search CodeNexon...">
+            <span class="utf_search_close">&times;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Nav End -->
+    <div class="page-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="breadcrumb">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../technology.html">Technology</a></li>
+              <li>AWS vs Azure vs Google Cloud: Which is Best in 2024?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="utf_block_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="single-post">
+              <div class="utf_post_thumb"><img class="img-fluid" src="../../images/news/tech/gadget1.jpg"
+                  alt="AWS vs Azure vs Google Cloud: Which is Best in 2024?"></div>
+              <div class="utf_post_content-area">
+                <div class="utf_post_head">
+                  <a class="utf_post_cat" href="../../technology.html">Cloud Computing</a> <span class="text-muted">·
+                    Comparison</span>
+                  <h1 class="utf_post_title">AWS vs Azure vs Google Cloud: Which is Best in 2024?</h1>
+                  <p class="lead">Market share, strengths, and pricing compared across the three major cloud providers,
+                    to help you choose the right one for your team and workload.</p>
+                  <div class="utf_post_meta"><span class="utf_post_author"><i class="fa fa-user"></i> <a
+                        href="../../author-shubham-handore.html">Shubham Handore</a></span><span
+                      class="utf_post_date"><i class="fa fa-clock-o"></i> Published 02 Sep, 2026</span><span
+                      class="utf_post_date"><i class="fa fa-hourglass-half"></i> ~5 min read</span></div>
+                </div>
+
+                <div class="entry-content">
+                  <p><strong>Choosing between the three major cloud providers depends on your use case, team skills,
+                      budget, and existing infrastructure. Here's how they actually compare in practice.</strong></p>
+
+                  <div class="quick-answer"
+                    style="background:#f6f7f9;border-left:4px solid #ec0000;padding:14px 18px;margin:18px 0;">
+                    <strong>Quick answer:</strong> Choose AWS for the broadest service catalog, Azure if you're already
+                    a Microsoft shop, and GCP for data analytics or machine learning workloads.
+                  </div>
+
+                  <div class="article-toc"
+                    style="background:#fafafa;border:1px solid #eee;padding:16px 20px;margin:20px 0;">
+                    <strong>In this comparison:</strong>
+                    <ul style="margin:8px 0 0;padding-left:20px;">
+                      <li><a href="#aws">Amazon Web Services (AWS)</a></li>
+                      <li><a href="#azure">Microsoft Azure</a></li>
+                      <li><a href="#gcp">Google Cloud Platform (GCP)</a></li>
+                      <li><a href="#pricing">Pricing Comparison</a></li>
+                      <li><a href="#verdict">Verdict</a></li>
+                      <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                  </div>
+
+                  <h2 id="aws">Amazon Web Services (AWS)</h2>
+                  <p>AWS holds roughly 31% of the cloud market, more than Azure and GCP combined in most surveys, and
+                    offers over 200 services spanning compute, storage, databases, machine learning, and IoT. Its
+                    biggest advantages are the sheer breadth of services, the most extensive global data center
+                    footprint, and the largest developer community, which means more tutorials, Stack Overflow answers,
+                    and third-party tooling. The trade-off is a notoriously complex pricing model and a steeper learning
+                    curve for beginners navigating the sheer number of services.</p>
+
+                  <h2 id="azure">Microsoft Azure</h2>
+                  <p>Azure sits at around 24% market share and is the natural choice for organizations already invested
+                    in Microsoft's ecosystem, Active Directory, Office 365, and Windows Server integrate more smoothly
+                    with Azure than with any competitor. Azure's hybrid cloud tooling (Azure Arc, Azure Stack) is
+                    genuinely industry-leading for enterprises that need to run workloads across on-premises and cloud
+                    environments simultaneously. Enterprise identity and compliance tooling are also a strong suit.</p>
+
+                  <h2 id="gcp">Google Cloud Platform (GCP)</h2>
+                  <p>GCP trails at around 11% market share but punches above its weight in specific areas: BigQuery for
+                    large-scale data analytics, Vertex AI for machine learning workflows, and Kubernetes, which Google
+                    originally created and still leads on. If your workload is data-heavy or ML-focused, GCP's tooling
+                    is often more polished and cheaper to run at scale than the equivalent AWS or Azure services.</p>
+
+                  <h2 id="pricing">Pricing Comparison</h2>
+                  <p>All three offer pay-as-you-go pricing with free tiers for experimentation, but actual costs vary
+                    significantly by service and region. GCP is often cited as the most cost-transparent with per-second
+                    billing on compute; AWS offers the deepest discounts through Reserved Instances and Savings Plans
+                    for predictable workloads; Azure frequently offers the best pricing for existing Microsoft licence
+                    holders through Hybrid Benefit programs. Always run the pricing calculator for your specific
+                    workload rather than relying on general market reputation.</p>
+
+                  <h2 id="verdict">Verdict</h2>
+                  <p>Choose <strong>AWS</strong> if you want the broadest service catalog and the largest talent pool to
+                    hire from. Choose <strong>Azure</strong> if your organization already runs on Microsoft
+                    infrastructure. Choose <strong>GCP</strong> if your workload centers on data analytics or machine
+                    learning. Many larger organizations end up multi-cloud, using each provider for what it does best.
+                  </p>
+
+                  <h2 id="faq">FAQs</h2>
+                  <p><strong>Can I use more than one provider?</strong><br>Yes. Many organizations run multi-cloud
+                    deployments, using each provider for its strongest services, though this adds operational
+                    complexity.</p>
+                  <p><strong>Which is cheapest for a small startup?</strong><br>It depends on your workload; all three
+                    have generous free tiers for experimentation, so test your actual usage pattern on each before
+                    committing.</p>
+                  <p><strong>Is Kubernetes tied to GCP?</strong><br>No. Kubernetes is open source and runs on all three
+                    providers, though GCP's managed offering is often considered the most mature since Google created
+                    the project.</p>
+
+                  <div class="update-note"
+                    style="font-size:0.9em;color:#777;border-top:1px solid #eee;margin-top:24px;padding-top:12px;">
+                    <strong>Update note:</strong> Published 02 Sep, 2026. No major revisions yet.
+                  </div>
+
+                  <div class="article-sources" style="font-size:0.9em;color:#777;margin-top:12px;">
+                    <strong>Further reading:</strong> <a href="https://aws.amazon.com" target="_blank"
+                      rel="noopener noreferrer">AWS</a>, <a href="https://azure.microsoft.com" target="_blank"
+                      rel="noopener noreferrer">Microsoft Azure</a>, <a href="https://cloud.google.com" target="_blank"
+                      rel="noopener noreferrer">Google Cloud</a>.
+                  </div>
+                </div>
+
+                <div class="author-bio" id="author-shubham-handore"
+                  style="display:flex;gap:16px;align-items:flex-start;border:1px solid #eee;padding:18px;margin:28px 0;">
+                  <a href="../../author-shubham-handore.html"><img src="../../images/news/tech/robot4.jpg"
+                      alt="Shubham Handore" style="width:64px;height:64px;border-radius:50%;object-fit:cover;"></a>
+                  <div>
+                    <a href="../../author-shubham-handore.html"
+                      style="color:#1c1c1c;text-decoration:none;"><strong>Shubham Handore</strong></a>, Tech Writer
+                    &amp; Founder, CodeNexon<br>
+                    <span class="text-muted">Shubham Handore is the founder of CodeNexon and a passionate tech writer
+                      covering AI, gadgets, cybersecurity, and software. He simplifies complex technology topics into
+                      clear, practical guides that help everyday users make smarter tech decisions.</span>
+                  </div>
+                </div>
+
+                <div class="related-articles" style="margin:28px 0;">
+                  <h3 class="utf_block_title"><span>Related Articles</span></h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="utf_post_block_style post-float clearfix">
+                        <div class="utf_post_thumb"><a href="../cloud/what-is-cloud-computing.html"><img
+                              class="img-fluid" src="../../images/news/tech/robot4.jpg"
+                              alt="What is Cloud Computing"></a></div>
+                        <div class="utf_post_content"><a class="utf_post_cat" href="../../technology.html">Cloud
+                            Computing</a>
+                          <h2 class="utf_post_title title-small"><a href="../cloud/what-is-cloud-computing.html">What is
+                              Cloud Computing? A Practical Guide</a></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="utf_post_block_style post-float clearfix">
+                        <div class="utf_post_thumb"><a href="../ai/what-is-generative-ai.html"><img class="img-fluid"
+                              src="../../images/news/tech/robot1.jpg" alt="What is Generative AI"></a></div>
+                        <div class="utf_post_content"><a class="utf_post_cat" href="../../technology.html">Artificial
+                            Intelligence</a>
+                          <h2 class="utf_post_title title-small"><a href="../ai/what-is-generative-ai.html">What is
+                              Generative AI? A Complete Beginner's Guide</a></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="utf_post_block_style post-float clearfix">
+                        <div class="utf_post_thumb"><a href="../coding/best-code-editors-2024.html"><img
+                              class="img-fluid" src="../../images/news/tech/robot5.jpg"
+                              alt="Best Code Editors 2024"></a></div>
+                        <div class="utf_post_content"><a class="utf_post_cat" href="../../how-to.html">Coding</a>
+                          <h2 class="utf_post_title title-small"><a href="../coding/best-code-editors-2024.html">Best
+                              Code Editors of 2024</a></h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="article-feedback" style="border-top:1px solid #eee;padding-top:16px;margin-top:8px;">
+                  <strong>Was this article helpful?</strong>
+                  <span id="feedback-buttons">
+                    <button type="button" class="btn btn-outline-secondary btn-sm"
+                      onclick="document.getElementById('feedback-buttons').style.display='none';document.getElementById('feedback-thanks').style.display='inline';">Yes</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm"
+                      onclick="document.getElementById('feedback-buttons').style.display='none';document.getElementById('feedback-thanks').style.display='inline';">No</button>
+                  </span>
+                  <span id="feedback-thanks" style="display:none;">Thanks for letting us know.</span>
+                  &nbsp;·&nbsp;<a href="../../contact.html">Report an issue</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="sidebar utf_sidebar_right">
+              <div class="widget">
+                <h3 class="utf_block_title"><span>Follow Us</span></h3>
+                <ul class="social-icon">
+                  <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="widget color-default">
+                <h3 class="utf_block_title"><span>Popular Posts</span></h3>
+                <div class="utf_list_post_block">
+                  <ul class="utf_list_post">
+                    <li class="clearfix">
+                      <div class="utf_post_block_style post-float clearfix">
+                        <div class="utf_post_thumb"><a href="../../blogs/ai/what-is-generative-ai.html"><img
+                              class="img-fluid" src="../../images/news/tech/robot1.jpg" alt=""></a></div>
+                        <div class="utf_post_content">
+                          <h2 class="utf_post_title title-small"><a
+                              href="../../blogs/ai/what-is-generative-ai.html">What is Generative AI?</a></h2>
+                          <div class="utf_post_meta"><span class="utf_post_date"><i class="fa fa-clock-o"></i> 16 Sep,
+                              2026</span></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="clearfix">
+                      <div class="utf_post_block_style post-float clearfix">
+                        <div class="utf_post_thumb"><a href="../../blogs/gadgets/best-smartphones-2024.html"><img
+                              class="img-fluid" src="../../images/news/tech/gadget1.jpg" alt=""></a></div>
+                        <div class="utf_post_content">
+                          <h2 class="utf_post_title title-small"><a
+                              href="../../blogs/gadgets/best-smartphones-2024.html">Best Smartphones of 2024</a></h2>
+                          <div class="utf_post_meta"><span class="utf_post_date"><i class="fa fa-clock-o"></i> 04 Sep,
+                              2026</span></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget m-bottom-0">
+                <h3 class="utf_block_title"><span>Newsletter</span></h3>
+                <div class="utf_newsletter_block">
+                  <div class="utf_newsletter_introtext">
+                    <h4>Stay Updated!</h4>
+                    <p>Get the latest technology news, guides, and reviews delivered to your inbox.</p>
+                  </div>
+                  <div class="utf_newsletter_form">
+                    <form action="#" method="post">
+                      <div class="form-group"><input type="email" name="email" id="newsletter-email"
+                          class="form-control form-control-lg" placeholder="E-Mail Address" autocomplete="off"><button
+                          class="btn btn-primary">Subscribe</button></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
+      <div class="utf_footer_main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-12 col-xs-12 footer-widget contact-widget">
+              <h3 class="widget-title">About CodeNexon</h3>
+              <ul>
+                <li>CodeNexon is your trusted source for technology news, honest gadget reviews, AI guides, coding
+                  tutorials, and cybersecurity insights &mdash; explained in clear, practical language.</li>
+                <li><i class="fa fa-envelope-o"></i> <a href="../../contact.html">info@codenexon.com</a></li>
+              </ul>
+              <ul class="unstyled utf_footer_social">
+                <li><a title="Facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a title="Twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a title="LinkedIn" href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a title="Instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-xs-12 footer-widget widget-categories">
+              <h3 class="widget-title">Explore</h3>
+              <ul>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../technology.html"><span
+                      class="catTitle">Technology</span></a></li>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../gadgets.html"><span
+                      class="catTitle">Gadgets</span></a></li>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../how-to.html"><span class="catTitle">How
+                      To</span></a></li>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../news.html"><span class="catTitle">News and
+                      Updates</span></a></li>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../software-apps.html"><span
+                      class="catTitle">Software and Apps</span></a></li>
+                <li><i class="fa fa-angle-double-right"></i><a href="../../categories.html#reviews"><span
+                      class="catTitle">Reviews</span></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-xs-12 footer-widget">
+              <h3 class="widget-title">Popular Posts</h3>
+              <div class="utf_list_post_block">
+                <ul class="utf_list_post">
+                  <li class="clearfix">
+                    <div class="utf_post_block_style post-float clearfix">
+                      <div class="utf_post_thumb"><a href="../../blogs/ai/what-is-generative-ai.html"><img
+                            class="img-fluid" src="../../images/news/tech/robot1.jpg" alt=""></a></div>
+                      <div class="utf_post_content">
+                        <h2 class="utf_post_title title-small"><a href="../../blogs/ai/what-is-generative-ai.html">What
+                            is Generative AI?</a></h2>
+                        <div class="utf_post_meta"><span class="utf_post_date"><i class="fa fa-clock-o"></i> 16 Sep,
+                            2026</span></div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 text-center">
+            <div class="utf_copyright_info"><span>Copyright &copy; 2026 CodeNexon. All Rights Reserved.</span></div>
+          </div>
+        </div>
+        <div id="back-to-top" class="back-to-top"><button class="btn btn-primary" title="Back to Top"><i
+              class="fa fa-angle-up"></i></button></div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery-3.2.1.min.js"></script>
+  <script src="../../js/popper.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../../js/owl.carousel.min.js"></script>
+  <script src="../../js/smoothscroll.js"></script>
+  <script src="../../js/custom_script.js"></script>
+</body>
+
+</html>
