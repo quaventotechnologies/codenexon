@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Newsletter form: visitors may add their own address and nothing else.
+    // Nobody can read, change or delete the list from the website.
+    match /newsletter_subscribers/{doc} {
+      allow create: if request.resource.data.keys().hasOnly(['email', 'subscribedAt', 'source'])
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 3
+                    && request.resource.data.email.size() < 255
+                    && request.resource.data.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$');
+      allow read, update, delete: if false;
+    }
+  }
+}

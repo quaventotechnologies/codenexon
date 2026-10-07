@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: .dark is set on <html> from the saved or device theme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* One typeface site-wide: every font utility resolves to Rethink Sans */
+@theme inline {
+  --font-sans: var(--font-rethink-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-rethink-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-rethink-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --primary-red: #dc2626;
+  --primary-red-hover: #b91c1c;
+  --primary-red-light: #fef2f2;
+  --primary-red-border: #fca5a5;
+  --border-editorial: #e5e7eb;
+  --bg-page: #ffffff;
+  --bg-surface: #f9fafb;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --text-subtle: #6b7280;
+  --headline-font: var(--font-sans);
+  --body-font: var(--font-sans);
+  --font-scale: 1rem;
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+  --primary-red: #ef4444;
+  --primary-red-hover: #dc2626;
+  --primary-red-light: #450a0a;
+  --primary-red-border: #991b1b;
+  --border-editorial: #262626;
+  --bg-page: #171717;
+  --bg-surface: #171717;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-subtle: #737373;
+}
+
+/* Font size modes */
+html[data-font-size="small"] {
+  --font-scale: 0.9rem;
+}
+html[data-font-size="medium"] {
+  --font-scale: 1rem;
+}
+html[data-font-size="large"] {
+  --font-scale: 1.15rem;
+}
+
+@layer base {
+  /* Unstyled borders follow the editorial rule colour instead of the text colour */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--border-editorial, currentColor);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+
+  /* Touch devices: 16px fields stop iOS zooming the page on focus */
+  @media (pointer: coarse) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+  }
+}
+
+body {
+  min-width: 320px;
+  overflow-x: clip;
+  overflow-wrap: break-word;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--body-font);
+  font-size: var(--font-scale);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-headline {
+  font-family: var(--headline-font);
+}
+
+/* Timestamps, scores and counters keep aligned digits without a mono face */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar for horizontal story rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Crisp newspaper separator lines */
+.newspaper-rule {
+  border-top: 1px solid var(--border-editorial);
+}
+
+.newspaper-rule-double {
+  border-top: 3px double var(--border-editorial);
+}
+
+.newspaper-rule-heavy {
+  border-top: 3px solid var(--primary-red);
+}
+
+/* Print/reading clarity */
+article p {
+  line-height: 1.75;
+}
