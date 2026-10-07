@@ -343,6 +343,86 @@ export const posts: Post[] = [
     tags: ["VPS", "DigitalOcean", "Linode", "Amazon Lightsail"],
   },
   {
+    slug: "how-to-deploy-nextjs-to-firebase-hosting",
+    title: "How to Deploy a Next.js Site to Firebase Hosting for Free",
+    description:
+      "Deploy a Next.js site to Firebase Hosting on the free plan: static export, firebase.json, custom domain, redirects, preview channels and rollback, step by step.",
+    excerpt:
+      "Set output to export, point firebase.json at the out folder and run one command. Here is the full process, with the errors CodeNexon hit on its own deploy and how to fix them.",
+    pillar: "hosting",
+    type: "Tutorial",
+    keyTakeaways: [
+      "A static export runs on Firebase's free Spark plan: 10 GB storage, 360 MB transfer a day.",
+      "Server-side rendering needs Firebase App Hosting on the paid Blaze plan.",
+      "Redirects in next.config do not work in a static export. Put them in firebase.json.",
+      "Every deploy can be rolled back from the Firebase console in seconds.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Next.js", "Firebase Hosting", "Deployment", "Static export"],
+  },
+  {
+    slug: "how-to-transfer-a-domain",
+    title: "How to Transfer a Domain to a New Registrar Without Downtime",
+    description:
+      "Transfer a domain step by step: unlock it, get the auth code, approve the move, and keep your website and email running. Includes ICANN's 5-day and 60-day rules.",
+    excerpt:
+      "Unlock the domain, get the authorization code and start the transfer. ICANN's rules give your registrar five days to hand over the code. Here is the full process and how to avoid downtime.",
+    pillar: "hosting",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Registrars must provide the auth code within 5 calendar days, under ICANN's Transfer Policy.",
+      "A transfer can be refused within 60 days of registration or a previous transfer.",
+      "A completed .com transfer adds one year to the registration.",
+      "If DNS is hosted at the old registrar, move it first, or the site and email can go offline.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 11,
+    tags: ["Domains", "Domain transfer", "DNS", "Registrars"],
+  },
+  {
+    slug: "http-security-headers",
+    title: "HTTP Security Headers Explained: 6 to Add to Your Website",
+    description:
+      "What HSTS, Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, Referrer-Policy and Permissions-Policy do, with safe values and Apache, Nginx and Firebase setup.",
+    excerpt:
+      "Six short headers block whole categories of attack, from HTTPS downgrades to clickjacking. Here is what each does, a safe starting value, and how to add them without breaking your site.",
+    pillar: "hosting",
+    type: "Explainer",
+    keyTakeaways: [
+      "Start HSTS with a short max-age and raise it to one year once HTTPS works everywhere.",
+      "Run Content-Security-Policy in report-only mode before enforcing it.",
+      "X-Content-Type-Options: nosniff is safe to add everywhere today.",
+      "Remove version numbers from Server and X-Powered-By headers.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Security headers", "HSTS", "Content-Security-Policy", "Website security"],
+  },
+  {
+    slug: "website-uptime-monitoring",
+    title: "Website Uptime Monitoring: How to Know Your Site Is Down First",
+    description:
+      "How website uptime monitoring works, what to monitor beyond the home page, check intervals explained, and what 99.9% uptime really allows, with free plan details.",
+    excerpt:
+      "Your host's SLA tells you what credit you can claim, not when your site is down. A free monitor checks every 5 minutes and alerts you first. Here is what to monitor and how to read the numbers.",
+    pillar: "hosting",
+    type: "Guide",
+    keyTakeaways: [
+      "UptimeRobot's free plan covers 50 monitors checked every 5 minutes.",
+      "99.9% uptime still allows about 8 hours 46 minutes of downtime a year.",
+      "Use a keyword monitor to catch pages that load but show an error.",
+      "Monitor SSL and domain expiry as well as the home page.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Uptime monitoring", "Website reliability", "UptimeRobot", "SLA"],
+  },
+  {
     slug: "why-is-my-wordpress-site-slow",
     title: "Why Is My WordPress Site Slow? 12 Fixes in Order",
     description:
@@ -500,6 +580,86 @@ export const posts: Post[] = [
     tags: ["WordPress hosting", "Managed WordPress", "Beginners", "Kinsta", "WP Engine"],
   },
   {
+    slug: "image-optimization-webp-avif",
+    title: "Image Optimization for the Web: Resize, WebP, AVIF and Lazy Loading",
+    description:
+      "How to optimize website images: resize to display size, convert to WebP or AVIF, compress, set width and height, and lazy load correctly. WordPress steps included.",
+    excerpt:
+      "A 4 MB phone photo can become a 230 KB WebP with no visible difference. Here is how to resize, convert and compress images, and write image tags that help Core Web Vitals.",
+    pillar: "wordpress",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Resize first. A 1,600 pixel image has 16% of the pixels of a 4,000 pixel one.",
+      "Google's web.dev recommends WebP and AVIF over JPEG and PNG where possible.",
+      "Always set width and height to prevent layout shift.",
+      "Lazy load images below the fold, never the main image at the top.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Image optimization", "WebP", "AVIF", "Site speed"],
+  },
+  {
+    slug: "wordpress-staging-site",
+    title: "How to Create a WordPress Staging Site and Push Changes Safely",
+    description:
+      "Three ways to create a WordPress staging site, how to lock it down, and how to push changes to live without overwriting orders, comments or users.",
+    excerpt:
+      "A staging site lets you test updates privately before visitors see them. Here are three ways to create one, the settings that stop it emailing real customers, and the safe way to push changes live.",
+    pillar: "wordpress",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Use your host's one-click staging tool if it has one.",
+      "Password-protect staging and set it to noindex.",
+      "Block email and switch payments to test mode on staging.",
+      "Never push a staging database over a live store. Orders since the copy will be lost.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["WordPress staging", "WordPress maintenance", "WP-CLI", "Testing"],
+  },
+  {
+    slug: "schema-markup-guide",
+    title: "Schema Markup Explained: Structured Data That Actually Helps",
+    description:
+      "What schema markup is, which types are worth adding, what changed for FAQ and HowTo in 2023, and how to add and test JSON-LD on WordPress and other sites.",
+    excerpt:
+      "Schema markup labels your content so search engines know what it is. Here is which types are worth adding, what Google stopped showing in 2023, and how to test your markup.",
+    pillar: "wordpress",
+    type: "Guide",
+    keyTakeaways: [
+      "Use JSON-LD, Google's recommended format.",
+      "Mark up only information visitors can see on the page.",
+      "Since August 2023, FAQ rich results show mainly for authoritative government and health sites.",
+      "Google stopped showing HowTo rich results in September 2023.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Schema markup", "Structured data", "JSON-LD", "SEO"],
+  },
+  {
+    slug: "xml-sitemap-robots-txt-guide",
+    title: "XML Sitemaps and Robots.txt Explained: What Google Uses",
+    description:
+      "How XML sitemaps and robots.txt work, Google's limits (50,000 URLs, 500 KiB), why robots.txt does not stop indexing, and how to set both up correctly.",
+    excerpt:
+      "A sitemap lists the pages you want found. Robots.txt says what crawlers may request. Google ignores priority and changefreq, and robots.txt does not keep pages out of results. Here is what works.",
+    pillar: "wordpress",
+    type: "Explainer",
+    keyTakeaways: [
+      "Google limits a sitemap to 50,000 URLs or 50 MB uncompressed.",
+      "Google ignores priority and changefreq, and uses lastmod only when it is accurate.",
+      "Robots.txt stops crawling, not indexing. Use noindex to keep a page out of results.",
+      "Google does not support crawl-delay.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["XML sitemap", "Robots.txt", "Technical SEO", "Crawling"],
+  },
+  {
     slug: "mailerlite-vs-mailchimp",
     title: "MailerLite vs Mailchimp: Pricing and Limits Compared (2026)",
     description:
@@ -595,6 +755,46 @@ export const posts: Post[] = [
     updatedAt: "2026-10-07",
     readMinutes: 12,
     tags: ["Email marketing", "Mailchimp", "Kit", "beehiiv", "Sender"],
+  },
+  {
+    slug: "google-search-console-setup",
+    title: "How to Set Up Google Search Console and Use Its Reports",
+    description:
+      "Set up Google Search Console in 15 minutes: Domain property, DNS verification, sitemap submission, and the reports that show what to fix next.",
+    excerpt:
+      "Search Console is the only place to see which Google searches your site appears for. Here is how to verify a Domain property, submit your sitemap and turn the reports into fixes.",
+    pillar: "saas",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Use a Domain property, which covers every subdomain and both HTTP and HTTPS.",
+      "Domain properties can only be verified with a DNS TXT record.",
+      "Never remove the verification record. Search Console checks it periodically.",
+      "Pages ranking 8 to 20 are the quickest wins to improve.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 9,
+    tags: ["Google Search Console", "SEO", "Indexing", "Sitemaps"],
+  },
+  {
+    slug: "ga4-setup-guide",
+    title: "How to Set Up Google Analytics 4: The Settings Most Sites Miss",
+    description:
+      "Set up Google Analytics 4 step by step: property, data stream and tag, then data retention, internal traffic, key events and Search Console linking.",
+    excerpt:
+      "Installing the GA4 tag takes ten minutes. Four settings decide whether the data is useful a year later: retention, internal traffic, key events and Search Console. Here is the full setup.",
+    pillar: "saas",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Universal Analytics stopped processing data on July 1, 2023.",
+      "Set data retention to the longest option. It affects explorations, not standard reports.",
+      "Filter out your own visits with an internal traffic rule.",
+      "Visitors who decline consent are not counted, so GA4 undercounts real traffic.",
+    ],
+    publishedAt: "2026-10-07",
+    updatedAt: "2026-10-07",
+    readMinutes: 10,
+    tags: ["Google Analytics 4", "Analytics", "Key events", "Consent"],
   },
 ];
 
