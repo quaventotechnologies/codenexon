@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AppShell from "@/components/AppShell";
-import { GUIDES_PATH, pillarPath, pillars } from "@/data/posts";
+import { GUIDES_PATH, Post, getPillar, getPost, pillarPath, pillars, postPath } from "@/data/posts";
+
+// Guides most likely to help someone who followed an old or broken link
+const popularSlugs = [
+  "best-web-hosting-for-small-business",
+  "how-to-choose-web-hosting",
+  "why-is-my-wordpress-site-slow",
+  "how-much-does-a-website-cost",
+  "spf-dkim-dmarc-explained",
+  "mailchimp-alternatives",
+];
 
 export const metadata: Metadata = {
   title: "Page Not Found",
@@ -9,6 +19,8 @@ export const metadata: Metadata = {
 };
 
 export default function NotFound() {
+  const popular = popularSlugs.map(getPost).filter((post): post is Post => Boolean(post));
+
   return (
     <AppShell>
       <div className="max-w-7xl mx-auto px-4 py-12 sm:py-20">
@@ -56,6 +68,27 @@ export default function NotFound() {
               </Link>
             ))}
           </div>
+        </div>
+
+        <div className="mt-10 pt-6 border-t border-neutral-200 dark:border-neutral-800">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white mb-3">
+            Popular guides
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 divide-y divide-neutral-200 dark:divide-neutral-800 md:divide-y-0">
+            {popular.map((post) => (
+              <li key={post.slug} className="py-3 md:border-b md:border-neutral-200 md:dark:border-neutral-800">
+                <span className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-wider">
+                  {getPillar(post.pillar).name}
+                </span>
+                <Link
+                  href={postPath(post)}
+                  className="block text-sm sm:text-base font-bold text-neutral-900 dark:text-neutral-100 leading-snug hover:text-red-600 dark:hover:text-red-400"
+                >
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </AppShell>

@@ -423,6 +423,86 @@ export const posts: Post[] = [
     tags: ["Uptime monitoring", "Website reliability", "UptimeRobot", "SLA"],
   },
   {
+    slug: "ssh-keys-explained",
+    title: "SSH Keys Explained: How to Create and Use Them Safely",
+    description:
+      "How SSH keys work and how to create, install and manage them on macOS, Linux and Windows, then switch off password login. Exact commands included.",
+    excerpt:
+      "An SSH key lets you log in to a server without a password that bots can guess. Here is how to create an Ed25519 key, install it, use an agent and manage keys as your team changes.",
+    pillar: "hosting",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Use Ed25519 keys, created with ssh-keygen -t ed25519.",
+      "Share the public key freely. Never share the private key.",
+      "Protect the private key with a passphrase and unlock it once per session with an agent.",
+      "Test key login before turning off password login, or you can lock yourself out.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["SSH", "Server security", "Linux", "Git"],
+  },
+  {
+    slug: "http2-vs-http3",
+    title: "HTTP/2 vs HTTP/3: What Changed and How to Enable It",
+    description:
+      "HTTP/2 vs HTTP/3 explained: multiplexing, head-of-line blocking, QUIC over UDP, faster connection setup, and how to check and enable each on your site.",
+    excerpt:
+      "HTTP/3 runs on QUIC over UDP, which removes a stall that HTTP/2 suffers on lossy networks and usually needs fewer round trips to connect. Here is what that means for your site and how to switch it on.",
+    pillar: "hosting",
+    type: "Explainer",
+    keyTakeaways: [
+      "HTTP/2 was standardized in May 2015 and HTTP/3 in RFC 9114 in 2022.",
+      "HTTP/3 uses QUIC over UDP, so one lost packet only stalls its own stream.",
+      "The biggest gains are on mobile and unreliable networks.",
+      "On your own server, open UDP port 443 or browsers fall back to HTTP/2.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["HTTP/3", "HTTP/2", "QUIC", "Site speed"],
+  },
+  {
+    slug: "nginx-vs-apache",
+    title: "Nginx vs Apache: Which Web Server Should You Use?",
+    description:
+      "Nginx vs Apache compared: connection handling, .htaccess vs central config, PHP and WordPress setup, reverse proxying and memory use, with config examples.",
+    excerpt:
+      "Both run websites well. Nginx is lighter and a natural reverse proxy. Apache allows per-folder .htaccess rules that shared hosts and WordPress plugins rely on. Here is how to choose.",
+    pillar: "hosting",
+    type: "Comparison",
+    keyTakeaways: [
+      "Nginx is usually the better choice for a new VPS you manage yourself.",
+      "Apache supports .htaccess files. Nginx keeps all rules in central configuration.",
+      "On Nginx, WordPress needs a try_files rule or inner pages return 404.",
+      "Many servers run Nginx in front of Apache to get both.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["Nginx", "Apache", "Web server", "WordPress hosting"],
+  },
+  {
+    slug: "change-domain-name-without-losing-seo",
+    title: "How to Change Your Domain Name Without Losing SEO",
+    description:
+      "Change your domain name step by step: map old URLs, set 301 redirects, use Google's Change of Address tool, and keep redirects at least a year.",
+    excerpt:
+      "Moving to a new domain puts years of search signals at risk. Page-to-page 301 redirects, Google's Change of Address tool and patience protect them. Here is the full sequence.",
+    pillar: "hosting",
+    type: "Guide",
+    keyTakeaways: [
+      "Redirect every old URL to its exact new equivalent with a 301.",
+      "Submit a Change of Address in Search Console for the old domain.",
+      "Google advises keeping redirects at least 1 year, and ideally indefinitely.",
+      "Expect a few weeks or more before a medium-sized site settles.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["Domain change", "Site migration", "SEO", "Redirects"],
+  },
+  {
     slug: "why-is-my-wordpress-site-slow",
     title: "Why Is My WordPress Site Slow? 12 Fixes in Order",
     description:
@@ -660,6 +740,66 @@ export const posts: Post[] = [
     tags: ["XML sitemap", "Robots.txt", "Technical SEO", "Crawling"],
   },
   {
+    slug: "canonical-tags-explained",
+    title: "Canonical Tags Explained: How to Handle Duplicate URLs",
+    description:
+      "What canonical tags do, how Google chooses a canonical URL, the mistakes that confuse it, and how to check what Google picked in Search Console.",
+    excerpt:
+      "The same page often loads at several addresses. A canonical tag tells search engines which one is the main version. Here is how to write them and the mistakes to avoid.",
+    pillar: "wordpress",
+    type: "Explainer",
+    keyTakeaways: [
+      "Google ranks redirects and rel=canonical as strong signals, and sitemaps as weak.",
+      "Add a self-referencing canonical with an absolute URL on every page.",
+      "Do not use robots.txt or noindex to choose a canonical.",
+      "Google treats canonicals as a signal, not an order. Check its choice in URL Inspection.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["Canonical tags", "Duplicate content", "Technical SEO", "Search Console"],
+  },
+  {
+    slug: "internal-linking-guide",
+    title: "Internal Linking: How to Connect Your Pages for Readers and SEO",
+    description:
+      "A practical internal linking guide: hub and spoke structure, anchor text, how many links to add, and how to find orphan pages and broken links.",
+    excerpt:
+      "Internal links help visitors find the next useful page and show search engines how your content fits together. Here is how to plan them, write anchor text and fix the gaps.",
+    pillar: "wordpress",
+    type: "Guide",
+    keyTakeaways: [
+      "Link each post up to its hub page and across to two to four related posts.",
+      "Use descriptive anchor text, not click here.",
+      "Add links to every new post from older pages that already get traffic.",
+      "Find orphan pages by comparing your sitemap with a crawl.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 10,
+    tags: ["Internal links", "SEO", "Content strategy", "Anchor text"],
+  },
+  {
+    slug: "fix-404-errors-broken-links",
+    title: "How to Fix 404 Errors and Broken Links (and Which to Ignore)",
+    description:
+      "How to find 404 errors, decide which ones matter, fix broken links and redirects correctly, avoid soft 404s, and build a useful 404 page.",
+    excerpt:
+      "Most 404s are harmless. The ones worth fixing are broken internal links, missing pages with outside links and old pages that still get visits. Here is how to find and fix them.",
+    pillar: "wordpress",
+    type: "Troubleshooting",
+    keyTakeaways: [
+      "Google treats all 4xx errors except 429 the same and drops that URL from its index.",
+      "Fix broken internal links at the source, not just with redirects.",
+      "Do not redirect every missing page to the home page.",
+      "A custom 404 page must still return a real 404 status.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 10,
+    tags: ["404 errors", "Broken links", "Redirects", "Technical SEO"],
+  },
+  {
     slug: "mailerlite-vs-mailchimp",
     title: "MailerLite vs Mailchimp: Pricing and Limits Compared (2026)",
     description:
@@ -795,6 +935,66 @@ export const posts: Post[] = [
     updatedAt: "2026-10-07",
     readMinutes: 10,
     tags: ["Google Analytics 4", "Analytics", "Key events", "Consent"],
+  },
+  {
+    slug: "password-manager-for-small-business",
+    title: "Password Managers for Small Business: What to Look For and What It Costs",
+    description:
+      "Why a small business needs a password manager, what features matter, what NIST says about passwords, and a rollout plan. Bitwarden Teams is $4 per user a month.",
+    excerpt:
+      "Shared spreadsheets and reused passwords fail the moment someone leaves or a service is breached. Here is what a business password manager does, what it costs and how to roll one out.",
+    pillar: "saas",
+    type: "Guide",
+    keyTakeaways: [
+      "Bitwarden Teams costs $4 per user per month billed annually, so 5 people pay $240 a year.",
+      "NIST says not to force periodic password changes or character-mix rules.",
+      "NIST requires single-factor passwords of at least 15 characters.",
+      "Protect email, registrar, hosting, bank and the password manager first.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 9,
+    tags: ["Password manager", "Bitwarden", "Security", "Small business"],
+  },
+  {
+    slug: "two-factor-authentication-explained",
+    title: "Two-Factor Authentication Explained: SMS vs Apps vs Passkeys",
+    description:
+      "Two-factor authentication methods compared, from SMS codes to passkeys and security keys, with NIST guidance and a setup plan that avoids lockouts.",
+    excerpt:
+      "Any second factor beats a password alone, but SMS is the weakest and passkeys the strongest. Here is how each method works, what NIST says, and how to set 2FA up without locking yourself out.",
+    pillar: "saas",
+    type: "Explainer",
+    keyTakeaways: [
+      "NIST lists SMS and phone verification as restricted.",
+      "Typed codes, including authenticator app codes, are not phishing-resistant.",
+      "Passkeys and hardware security keys resist phishing.",
+      "Save backup codes for every account before you need them.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 10,
+    tags: ["Two-factor authentication", "Passkeys", "Security", "MFA"],
+  },
+  {
+    slug: "google-tag-manager-setup",
+    title: "How to Set Up Google Tag Manager: Tags, Triggers and GA4",
+    description:
+      "Set up Google Tag Manager step by step: install the container, add GA4, test in Preview, publish versions, and track form submissions and phone clicks.",
+    excerpt:
+      "Tag Manager lets you add and change tracking without editing your site. Here is how to install it, connect GA4, track form submissions and phone clicks, and keep the container tidy.",
+    pillar: "saas",
+    type: "Tutorial",
+    keyTakeaways: [
+      "Install both parts of the container snippet on every page.",
+      "Remove any direct GA4 tag, or page views are counted twice.",
+      "Always test in Preview mode before publishing.",
+      "Every published version can be restored if a change breaks something.",
+    ],
+    publishedAt: "2026-10-08",
+    updatedAt: "2026-10-08",
+    readMinutes: 10,
+    tags: ["Google Tag Manager", "Analytics", "GA4", "Event tracking"],
   },
 ];
 
